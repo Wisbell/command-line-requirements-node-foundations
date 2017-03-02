@@ -6,10 +6,21 @@
 
 let [,, ...numberArgs] = process.argv
 
-console.log(numberArgs)
+// console.log(numberArgs)
 
-let numberArray = numberArgs.map((num) => Number(num))
-console.log(numberArray)
+let addArray = () => {
 
-let sum = numberArray.reduce((accum, val) => accum + val )
-console.log(sum)
+  if(numberArgs.length > 0){
+    let numberArray = numberArgs.map((num) => Number(num))
+    //console.log(numberArray)
+
+    let sum = numberArray.reduce((accum, val) => accum + val )
+    console.log(sum)
+    return sum
+  } else {
+    console.log(0)
+    return 0;
+  }
+}
+
+addArray()
